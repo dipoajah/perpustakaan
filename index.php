@@ -3,9 +3,9 @@ require_once __DIR__ . '/config/koneksi.php';
 require_once __DIR__ .  '/includes/cek_login.php';
 cekLogin();
 
-$totalBuku = $koneksi->query("SELEST COUNT(*) AS jml FROM buku")->fetch()['jml'];
-$totalKategori = $koneksi->query("SELEST COUNT(*) AS jml FROM buku")->fetch()['jml'];
-$totalUser = $koneksi->query("SELEST COUNT(*) AS jml FROM buku")->fetch()['jml'];
+$totalBuku = $koneksi->query("SELECT COUNT(*) AS jml FROM buku")->fetch()['jml'];
+$totalKategori = $koneksi->query("SELECT COUNT(*) AS jml FROM kategori")->fetch()['jml'];
+$totalUser = $koneksi->query("SELECT COUNT(*) AS jml FROM users")->fetch()['jml'];
 
 $judul_halaman = 'Dashboard';
 require_once __DIR__ . '/includes/header.php';
