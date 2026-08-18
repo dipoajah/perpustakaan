@@ -1,5 +1,5 @@
 <?php
-define('BASE_URL', '/perpustakaan/');
+define('BASE_URL', '/');
 
 $host = 'localhost';
 $dbname = 'db_perpustakaan';
