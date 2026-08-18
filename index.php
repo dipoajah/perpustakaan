@@ -1,6 +1,6 @@
 <?php 
 require_once __DIR__ . '/config/koneksi.php';
-require_once __DIR__ .  '/includes/cek_login';
+require_once __DIR__ .  '/includes/cek_login.php';
 cekLogin();
 
 $totalBuku = $koneksi->query("SELEST COUNT(*) AS jml FROM buku")->fetch()['jml'];
