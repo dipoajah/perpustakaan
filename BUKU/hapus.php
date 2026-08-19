@@ -1,11 +1,11 @@
 <?php
 require_once __DIR__ . '/../config/koneksi.php';
-require_once __DIR__ . '/../includes/cel_login.php';
+require_once __DIR__ . '/../includes/cek_login.php';
 cekLogin();
 
 $id = $_GET['id'] ?? null;
 if ($id) {
-	$stmt = $koneksi->prepare("DELET FROM buku WHERE id = ?");
+	$stmt = $koneksi->prepare("DELETE FROM buku WHERE id = ?");
 	$stmt->execute([$id]);
 }
 
